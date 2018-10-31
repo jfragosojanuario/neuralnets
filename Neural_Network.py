@@ -64,7 +64,9 @@ classifier.fit(x_train,y_train,epochs=100) #definir os parâmetros da data de in
 y_pred = classifier.predict(x_test) 
 y_pred=(y_pred>0.5) #criar um treshold; se for superior a 0,5 vale como 1, se for inferior vale como 0
 
-
+#confusion matrix to assess performance
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test,y_pred)
 
 
 
