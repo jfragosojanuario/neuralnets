@@ -58,7 +58,7 @@ classifier.add(Dense(units=1, kernel_initializer="uniform",activation="sigmoid")
 
 #Train the Network
 
-classifier.compile(optimizer="adam",loss="binary_crossentropy", metrics=["accuracy"]) #with imbalenced dataset it is preferable to use weighted acuracy
+classifier.compile(optimizer="adam",loss="binary_crossentropy", metrics=["accuracy"]) #with inbalanced dataset it is preferable to use weighted acuracy
 classifier.fit(x_train,y_train,epochs=100) #definir os parâmetros da data de input e o numero de iterações no treino
 
 y_pred = classifier.predict(x_test) 
